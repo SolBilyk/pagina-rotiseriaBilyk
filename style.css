@@ -84,7 +84,8 @@ body{
     position: absolute;
     top: 700px;
     bottom: 0px;
-    width: 350px;
+    width: 200px;
+    z-index: -1;
 }
 
 .header-info{
@@ -485,5 +486,10 @@ a {
 
     .socials {
         margin-bottom: 25px;
+    }
+}
+@media(max-width: 1557px) {
+    .esp {
+        display: none;
     }
 }

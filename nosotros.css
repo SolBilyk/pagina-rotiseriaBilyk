@@ -268,3 +268,9 @@ a {
         margin-bottom: 25px;
     }
 }
+
+@media(max-width: 1557px) {
+    .esp {
+        display: none;
+    }
+}
