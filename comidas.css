@@ -1,0 +1,397 @@
+/*Fonts*/ /*Al link principal lo copio en el html*/
+/* Luego Especifico el tipo de font copiando Poppins: CSS classes*/
+/*Establezco los valores predeterminados en cero*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Forma de escritorio*/
+
+body{
+    font-family: "Poppins", sans-serif;
+        
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header{ 
+    display: flex;
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    color: #303030;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #303030;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #df3b04fa;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;    
+}
+
+.menu label{
+    cursor: pointer;
+    
+}
+
+.bg{
+    position: absolute; /*esto es para colocarla en la esquina*/
+    width: 600px;
+    z-index: -1; /*para posicionarlo atras de todos los elementos*/
+    right: 0px; /*me lleva la imagen hacia la derecha*/
+}
+
+.esp{
+    position: absolute;
+    top: 700px;
+    bottom: 0px;
+    width: 350px;
+}
+
+.header-info{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.header-txt{
+    width: 50%;
+    padding-right: 35px;
+}
+
+.header-txt h1{
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 600;
+    color: #303030;
+    margin-bottom: 25px;
+    /*text-transform: capitalize; /*para que las primeras palabras siempre empiecen con mayuscula*/
+    text-align: center;
+}
+
+.header-txt p{
+    font-size: 16px;
+    color: #545454;
+    margin-bottom: 35px;
+}
+
+.btn-1{
+    display: inline-block;
+    background-color: #FF9F0D;
+    padding: 13px 30px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /*sombra centrada*/
+}
+
+.btn-1:hover{
+    background-color: #EE9003;
+}
+
+.header-img{
+    width: 50%;
+}
+
+.header-img img{
+    width: 400px;
+    border-radius: 400px;
+}
+
+.bg-3{
+    margin-top: 320px;
+    position: absolute; /*esto es para colocarla en la esquina*/
+    max-width:fit-content ;
+    max-height: 100%;
+    
+    z-index: -1; /*para posicionarlo atras de todos los elementos*/
+    bottom:auto;
+    right: 0; /*me lleva la imagen hacia la derecha*/
+}
+#titulo{
+    color: #EE9003;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.products {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 45px;
+    color: #303030;
+    margin-bottom: 30px;
+}
+
+.products p{
+    font-size: 18px;
+    color: #545454;
+    margin-bottom: 70px;
+    padding: 0 200px;
+}
+
+.product-info {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*divide las columnas en 3*/
+    grid-auto-rows: auto; /*para que se posicionen en hileras, debajo de cada una*/
+    grid-gap: 8rem;
+}
+
+.product {
+    width: 150%;
+    padding-bottom: 35px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 25px;
+}
+
+.product img {
+    width: 100%;
+    height: min-content;
+    border-radius: 25px 25px 0 0 ;
+}
+
+.product h3 {
+    font-size: 20px;
+    color: #303030;
+    margin-top: 15px;
+}
+
+.product p {
+    font-size: 16px;
+    padding: 30px;
+    color: #545454;
+    margin: 0;
+}
+
+.product span {
+    background-color: #FF9F0D;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+span {
+    background-color: #FF9F0D;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 15px;
+
+}
+
+hr { 
+    border: 1px solid #EEE;
+}
+
+.footer {
+    padding: 100px 0; /*arriba, abajo, izq, derecha*/
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; /*separacion entre los elementos*/
+}
+
+.link h3 {
+    font-size: 20px;
+    color: #303030;
+    margin-bottom: 20px;
+}
+
+.socials img {
+    margin-right: 15px; /*separacion de las redes sociales*/
+}
+
+a {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #545454;
+    text-align: center;
+}
+#copyright{
+    font-style: italic;
+}
+
+
+/*RESPONSIVE*/
+
+/*Responsive*/
+@media(max-width: 991px) {
+.menu {
+    padding: 30px;
+    margin-right: 50px; /*Para que el icono de menu se vea mas en la pantalla*/
+    
+}
+.menu label {
+    display: initial;
+}
+
+.menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    /*Video:
+    right: 0;
+    left: 0;*/
+    background-color: #303030cc;
+    display: none;
+}
+
+.menu .navbar ul li {
+    width: 100%;
+}
+
+.menu .navbar ul li a {
+    color: #ffffff;
+}
+
+.menu .navbar ul li a:hover {
+    color: #e7b70d;
+}
+
+#menu:checked ~ .navbar {
+    display: initial;
+}
+
+.bg {
+    width: 350px;
+}
+
+.esp {
+    display: none;
+}
+
+.header-info {
+    flex-direction: column;
+    padding: 30px;
+}
+
+.header-txt {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+}
+
+.header-txt h1 {
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.header-img {
+    width: 100%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.header-img img {
+    width: 300px;
+}
+
+.info {
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-1 {
+    margin-bottom: 20px;
+}
+
+.nosotros {
+    padding: 30px;
+}
+
+.bg-2 {
+    top: 20px;
+    width: 200px;
+}
+
+.product{
+    width: 100%;
+
+
+}
+.products {
+    padding: 20px;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 40px;
+}
+
+.products p {
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.product-info {
+    grid-template-columns: repeat(1, 2fr);
+
+}
+
+.product p {
+    padding: 10px;
+}
+
+.bg-3{
+    display: none;
+}
+
+.footer {
+    padding: 30px;
+}
+.footer-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.socials {
+    margin-bottom: 25px;
+}
+}
