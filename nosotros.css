@@ -80,12 +80,7 @@ body{
     right: 0px; /*me lleva la imagen hacia la derecha*/
 }
 
-.esp{
-    position: absolute;
-    top: 700px;
-    bottom: 0px;
-    width: 350px;
-}
+
 
 .header-info{
     display: flex;
@@ -130,13 +125,38 @@ body{
     background-color: #EE9003;
 }
 
+
+#btn-zoom{
+    display: inline-block;
+    background-color: #FF9F0D;
+    padding: 13px 30px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-transform: capitalize;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /*sombra centrada*/
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#btn-zoom:hover {
+    transform: scale(1.1); /* Aumenta tamaño */
+    box-shadow: 0 10px 20px rgba(255, 102, 0, 0.5); /* Sombra animada */
+    background-color: #ee9003b7;
+}
+
 .header-img{
     width: 100%;
 }
 
 .header-img img{
     width: 400px;
+    border-radius: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+.header-img img:hover {
+    transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y gira */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
 }
 
 .info {
@@ -200,7 +220,7 @@ a {
         /*Video:
         right: 0;
         left: 0;*/
-        background-color: #303030cc;
+        background-color: #303030d2;
         display: none;
     }
 
@@ -208,13 +228,31 @@ a {
         width: 100%;
     }
 
-    .menu .navbar ul li a {
+    /* .menu .navbar ul li a {
         color: #ffffff;
+    }  */
+
+    .menu .navbar ul li a {
+        color: #ffffff; /* Color inicial del texto */
+        text-decoration: none; /* Elimina subrayado */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+    }
+    
+    .menu .navbar ul li {
+        width: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .menu .navbar ul li a:hover {
+        background-color: #d3a409; /* Fondo más oscuro */
+        color: #000000; /* Cambia el color del texto */
     }
 
-    .menu .navbar ul li a:hover {
-        color: #e7b70d;
+    .menu .navbar ul li a:active {
+        color: #e0d9be;
+        background-color: #e2980d;
     }
+    
 
     #menu:checked ~ .navbar {
         display: initial;
@@ -224,9 +262,6 @@ a {
         width: 350px;
     }
 
-    .esp {
-        display: none;
-    }
 
     .header-info {
         flex-direction: column;
@@ -269,7 +304,7 @@ a {
     }
 }
 
-@media(max-width: 1557px) {
+@media(max-width: 1900px) {
     .esp {
         display: none;
     }
