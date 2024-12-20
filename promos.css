@@ -52,6 +52,9 @@ body{
     text-decoration: none; /* Elimina el subrayado */
 }
 
+.menu-icono{
+    display: none; 
+}
 
 .menu .navbar ul li{
     position: relative;
@@ -376,7 +379,12 @@ a {
 
 .logo{
     text-align: center;
-    
+    color: #e9ad07;
+    text-shadow: 
+    -1px -1px 0 black, /* Sombra superior izquierda */
+    1px -1px 0 black,  /* Sombra superior derecha */
+    -1px 1px 0 black,  /* Sombra inferior izquierda */
+    1px 1px 0 black;   /* Sombra inferior derecha */
 }
 
 .menu-icono{
@@ -448,6 +456,9 @@ a {
     width: 80%;
     /* margin: auto; */
     margin: 0 auto;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más grande y definida */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+    transition: box-shadow 0.3s ease; /* Transición suave al pasar el cursor */
 }
 
 .combos-navidad{
@@ -471,26 +482,39 @@ a {
 } 
 
 .combos-navidad-arrollados{
-    width: 95%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     margin:auto;
     justify-content: center;
-   
+    
+        
 }
 
 .combos-navidad-arrollados img{
-    width: 80%;
+    width: 95%;
     margin: auto;
+    margin-top: 5%;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.arrollado-pollo{
+    margin-bottom: 15%;
+    column-gap: 15%;
+}
+.arrollado-carne{
+    margin-top: 5%;
 }
 
 .combos-navidad-vitel{
     display: flex;
     justify-content: center;
-    
-    height: 50vh;
+    height: 70vh;
     margin: auto;
     margin-bottom: 5%;
+    
 }
 
 
