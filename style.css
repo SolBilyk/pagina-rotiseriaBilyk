@@ -710,17 +710,23 @@ a {
     }
 
     .header-img {
-        width: 100%;
+        
         display: flex; /* Activa Flexbox */
         justify-content: center; /* Centra horizontalmente */
         align-items: center; /* Centra verticalmente */
         padding-top: 35px; /* Espaciado superior */
     }
 
+    .header-img {
+        width: 80%;
+        text-align: center;
+        padding-top: 35px;
+    }
+
     .header-img img {
-    width: 300px;  
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        width: 200px;
+    }
+
 
     .header-img img:hover {
     transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y gira */

@@ -283,8 +283,130 @@ iframe{
 }    
 }
 
-@media(max-width: 1900px) {
+@media(max-width: 700px) {
+    .menu {
+        padding: 30px;
+        margin-right: 50px; /*Para que el icono de menu se vea mas en la pantalla*/
+        
+    }
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        /*Video:
+        right: 0;
+        left: 0;*/
+        background-color: #303030d2;
+        display: none;
+    }
+
+   
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    /* .menu .navbar ul li a {
+        color: #ffffff;
+    }  */
+
+    .menu .navbar ul li a {
+        color: #ffffff; /* Color inicial del texto */
+        text-decoration: none; /* Elimina subrayado */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+    }
+    
+    .menu .navbar ul li {
+        width: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .menu .navbar ul li a:hover {
+        background-color: #d3a409; /* Fondo más oscuro */
+        color: #000000; /* Cambia el color del texto */
+    }
+
+    .menu .navbar ul li a:active {
+        color: #e0d9be;
+        background-color: #e2980d;
+    }
+    
+    
+    
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .bg {
+        width: 350px;
+    }
+
     .esp {
         display: none;
+    }
+
+    .header-info {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .header-txt {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .header-img {
+        width: 100%;
+        display: flex; /* Activa Flexbox */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        padding-top: 35px; /* Espaciado superior */
+    }
+
+    .header-img img {
+    width: 300px;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .header-img img:hover {
+    transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y gira */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+
+    .info {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-1 {
+        margin-bottom: 20px;
+    }
+
+    .nosotros {
+        padding: 30px;
+    }
+
+    .bg-2 {
+        top: 20px;
+        width: 200px;
+    }
+
+    .nosotros-info {
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }

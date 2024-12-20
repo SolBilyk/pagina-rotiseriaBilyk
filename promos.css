@@ -1,0 +1,535 @@
+/*Fonts*/ /*Al link principal lo copio en el html*/
+/* Luego Especifico el tipo de font copiando Poppins: CSS classes*/
+/*Establezco los valores predeterminados en cero*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/*Forma de escritorio*/
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-image:url("imagenes/fondo-estrellas.jpg")
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+} 
+
+.header{ 
+    display: flex;
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo{
+    color: #303030;
+    font-size: 25px;
+    font-weight: 800;
+    
+}
+
+.menu .container .logo:hover {
+    color: #FF9F0D;
+    background-color: #d3a409;
+    padding: 5px;
+    border-radius: 5px;
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+
+.menu .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: #303030;
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover{
+    color: #df3b04fa;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;    
+}
+
+.menu label{
+    cursor: pointer;
+    
+}
+
+
+
+.header-info{
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+}
+
+
+.header-txt p{
+    font-size: 16px;
+    color: #545454;
+    margin-bottom: 35px;
+    text-align: justify;
+}
+
+.header-txt-combo{
+    color: #c70808;
+    margin-top: 4%;
+    margin-bottom: 4% ;
+    font-size: 30px;
+}
+
+.header-img{
+    width: 10%;
+}
+
+.header-img img{
+    width: 4px;
+    border-radius: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header-img img:hover {
+    transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y gira */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+.header-txt{
+    width: 50%;
+    padding-right: 35px;
+    text-align: center;
+}
+
+.header-txt h1{
+    font-size: 55px;
+    line-height: 70px;
+    font-weight: 600;
+    color: #303030;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+    text-align: center;
+}
+
+
+.header-christmas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    justify-items: left;
+    margin-left: -20%;
+
+}
+
+.header-christmas-vertical {
+    display: none; /* Ocultar por defecto */
+}
+
+
+.combos-navidad{
+    display: flex;
+    flex-direction: row;
+    gap: 2%;
+}
+
+.combo1{
+    width: 40%;
+    margin: auto;
+    margin-left: 10%;
+    
+} 
+.combo2{
+    width: 40%;
+    margin: auto;
+    margin-right: 10%;
+    
+} 
+
+.combos-navidad-arrollados{
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+}
+
+.combos-navidad-vitel{
+    display: flex;
+    gap: 2%;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+hr { 
+    border: 1px solid #EEE;
+}
+
+.footer {
+    padding: 100px 0; /*arriba, abajo, izq, derecha*/
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between; /*separacion entre los elementos*/
+}
+
+.link h3 {
+    font-size: 20px;
+    color: #303030;
+    margin-bottom: 20px;
+}
+
+.socials img {
+    margin-right: 15px; /*separacion de las redes sociales*/
+}
+
+a {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 10px;
+    color: #545454;
+    text-align: center;
+}
+#copyright{
+    font-style: italic;
+}
+
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 991px) and (min-width: 840px) {
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 30%;
+        /*Video:
+        right: 0;
+        left: 0;*/
+        background-color: #303030d2;
+        display: none;
+    }
+    #menu-icono img{
+        color: #d81111;
+        right: 10%;
+        display: flex;
+        justify-content: space-evenly;
+        position: absolute;
+    }
+
+    .logo{
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    .menu .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        justify-items: center;
+        position: absolute;
+        right: 0;
+    }
+
+
+
+    .menu .navbar ul li {
+        width: 60%;
+    }
+
+
+    .menu .navbar ul li a {
+        color: #ffffff; /* Color inicial del texto */
+        text-decoration: none; /* Elimina subrayado */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+    }
+    
+    .menu .navbar ul li {
+        width: 100%;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .menu .navbar ul li a:hover {
+        background-color: #d3a409; /* Fondo más oscuro */
+        color: #000000; /* Cambia el color del texto */
+    }
+
+    .menu .navbar ul li a:active {
+        color: #e0d9be;
+        background-color: #e2980d;
+    }
+    
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .bg {
+        width: 350px;
+    }
+
+    .esp {
+        display: none;
+    }
+
+    .header-info {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .header-txt {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+
+    .header-txt h1 {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .header-img {
+        width: 100%;
+        display: flex; /* Activa Flexbox */
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        padding-top: 35px; /* Espaciado superior */
+    }
+
+    .header-img img {
+    width: 300px;  
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .header-img img:hover {
+    transform: scale(1.05) rotate(-1deg); /* Aumenta el tamaño y gira */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+.header-christmas-1{
+    display: none; 
+    
+}
+
+.header-christmas-vertical{
+    width: 8%;
+}
+
+
+    .footer {
+        margin: 0 5rem;
+    }
+}
+
+
+
+
+/*Responsive*/
+@media(max-width: 440px) {
+
+.container{
+    /* width: 90%;   */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    max-width: 1200px; /* Ajusta según el diseño */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 0 15px; /* Espacio para evitar que el contenido toque los bordes */
+} 
+
+.menu {
+    padding: 30px;
+    margin-right: 60px; /*Para que el icono de menu se vea mas en la pantalla*/
+    
+}
+
+.menu label {
+    display: initial;
+}
+
+.logo{
+    text-align: center;
+    
+}
+
+.menu-icono{
+    color: #000000;
+}
+.menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 30%;
+    background-color: #303030d2;
+    display: none;
+}
+
+.menu .navbar ul li {
+    width: 100%;
+}
+
+.menu .navbar ul li a {
+    color: #ffffff; /* Color inicial del texto */
+    text-decoration: none; /* Elimina subrayado */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+}
+
+.menu .navbar ul li {
+    width: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #d3a409; /* Fondo más oscuro */
+    color: #000000; /* Cambia el color del texto */
+}
+
+.menu .navbar ul li a:active {
+    color: #e0d9be;
+    background-color: #e2980d;
+}
+
+
+
+#menu:checked ~ .navbar {
+    display: initial;
+}
+
+
+.header-txt-combo{
+    color: #c70808;
+    margin-top: 4%;
+    margin-bottom: 4% ;
+    font-size: 15px;
+}
+
+
+.header-christmas-1{
+    display: none; 
+    
+}
+
+.header-christmas-vertical {
+    display: block; /* Asegurarse de que se muestre */
+    width: 100%; /* Ajustar al contenedor */
+    height: 7%; /* Mantener proporciones */
+    margin: 0 auto; /* Centrar */
+    text-align: center; /* Opcional para centrar el contenido */
+    margin-top: 12%;
+}
+
+.header-christmas-vertical img{
+    width: 80%;
+    /* margin: auto; */
+    margin: 0 auto;
+}
+
+.combos-navidad{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.combo1{
+    width: 85%;
+    margin: auto;
+    margin-bottom: 5%;
+    
+    
+} 
+.combo2{
+    width: 85%;
+    margin: auto;
+    
+    
+} 
+
+.combos-navidad-arrollados{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    justify-content: center;
+   
+}
+
+.combos-navidad-arrollados img{
+    width: 80%;
+    margin: auto;
+}
+
+.combos-navidad-vitel{
+    display: flex;
+    justify-content: center;
+    
+    height: 50vh;
+    margin: auto;
+    margin-bottom: 5%;
+}
+
+
+
+
+
+.footer {
+    padding: 30px;
+}
+.footer-links {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.socials {
+    margin-bottom: 25px;
+}
+}
+
+/* @media(max-width: 1557px) {
+    .esp {
+        display: none;
+    }
+}
+
+@media(max-width: 1557px) {
+
+    .container{
+        max-width: fit-content;
+        margin: 0 auto;
+    }
+
+    .header-img{
+        width: 30%;
+    }
+    
+    .header-img img{
+        width: 300px;
+        border-radius: 400px;
+    }
+} */

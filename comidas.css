@@ -498,12 +498,15 @@ a {
     
 }
 
-.header .logo{
-margin-left: -35%;
-}
+
 
 .menu label {
     display: initial;
+}
+
+.logo{
+    text-align: center;
+    
 }
 
 .menu .navbar {
@@ -589,6 +592,16 @@ margin-left: -35%;
 width: 300px;  
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+}
+
+.header-img {
+    width: 80%;
+    text-align: center;
+    padding-top: 35px;
+}
+
+.header-img img {
+    width: 200px;
 }
 
 .header-img img:hover {
